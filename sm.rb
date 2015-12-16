@@ -150,6 +150,9 @@ class MapUpdator < Map
     if (@map[y][x][:open] && flag_somme(x, y) == @map[y][x][:proxy])
       ((y - 1)..(y + 1)).each do |h|
         ((x - 1)..(x + 1)).each do |w|
+          if (h > -1 && w > -1 && @map[h][w][:bomb] && !@map[h][w][:flag])
+            return(1)
+          end
           if (h > -1 && w > -1 && @map[h] != nil && @map[h][w] != nil \
                              && !@map[h][w][:open] && !@map[h][w][:bomb] \
                              && !@map[h][w][:flag])
