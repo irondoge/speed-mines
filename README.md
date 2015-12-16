@@ -9,7 +9,7 @@ You may install ruby and gosu library first: https://github.com/gosu/gosu/wiki/G
 * on linux
 
   ```
-    git clone https://github.com/gjsheep/speed-mines
+    git clone https://github.com/gjsheep/speed-mines.git
     cd speed-mines
     ./sm.rb
   ```
