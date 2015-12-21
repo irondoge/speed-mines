@@ -7,7 +7,7 @@ TITLE =         "Speed Mines | BETA - ruby/gosu"
 TITLE_LAUNCH =  "Speed Mines | BETA_LAUNCHER - ruby/gosu"
 BOX_SIZE =      20
 OFFSET =        2
-FULLSCREEN =    false
+FULLSCREEN =    true
 FULLSCREEN_LAUNCH =     false
 
 # assets default paths

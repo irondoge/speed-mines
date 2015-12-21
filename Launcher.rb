@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
 
+require("gosu")
+require("#{File.dirname(__FILE__)}/Utils")
+require("#{File.dirname(__FILE__)}/Constants")
+require("#{File.dirname(__FILE__)}/Map")
+
 class   LaunchWindow < Gosu::Window
   attr_accessor(:width, :height, :offset)
 
@@ -15,7 +20,7 @@ class   LaunchWindow < Gosu::Window
 
   def draw
     @title_launch.draw(0,0,0)
-    @font.draw("Score:", 100, 10, 0, 1.0, 1.0, 0xff_ffffff)
+    @font.draw("Score:", 50, 200, 0, 1.0, 1.0, 0xff_ffffff)
   end
 end
 
