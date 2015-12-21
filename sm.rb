@@ -6,17 +6,19 @@ require("#{File.dirname(__FILE__)}/Utils")
 require("#{File.dirname(__FILE__)}/Constants")
 require("#{File.dirname(__FILE__)}/Map")
 
+
 class GameWindow < Gosu::Window
-  attr_accessor(:img_list, :start, :coo, :map, :T1)
+  attr_accessor(:img_list, :start, :coo, :map, :T1, :font)
 
   def initialize(grid, map)
     super(WIDTH, HEIGHT, :fullscreen => FULLSCREEN)
     self.caption = TITLE
-    @map = map
-    @T1 = true
-    @apm = 0
-    @ape = 0
-    @clock = 0
+    @map        = map
+    @T1         = true
+    @apm        = 0
+    @ape        = 0
+    @clock      = 0
+    @font       = Gosu::Font.new(25)
     grid_size = [ grid[0] * (BOX_SIZE + (2 * OFFSET)), \
                    grid[1] * (BOX_SIZE + (2 * OFFSET)) ]
     print("grid ", @grid_size, "\n")
@@ -64,6 +66,7 @@ class GameWindow < Gosu::Window
     print("clock: ", @clock.to_i(), \
           ", apm: ", (@apm / (@clock / 60)).to_i(), \
           ", ape: ", (@ape / (@clock / 60)).to_i(), "\n")
+    @font.draw("clock: #{@clock.to_i()}, apm: #{(@apm / (@clock / 60)).to_i()}, ape: #{(@ape / (@clock / 60)).to_i()}", 10, 10, 0, 1.0,1.0, 0xff_ffffff)
   end
 
   def sync()
@@ -201,5 +204,7 @@ def main(argv)
 end
 
 if (__FILE__ == $0)
+  END { puts "Thank you for playing, see you soon." }
   exit(main(ARGV))
 end
+
