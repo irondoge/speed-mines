@@ -41,7 +41,8 @@ class GameWindow < Gosu::Window
   end
 
   def get_pos_from_coo(x, y)
-    [ (x * (BOX_SIZE + 2 * OFFSET)) + OFFSET, (y * (BOX_SIZE + 2 * OFFSET)) + OFFSET ]
+    [ (x * (BOX_SIZE + 2 * OFFSET)) + OFFSET, \
+      (y * (BOX_SIZE + 2 * OFFSET)) + OFFSET ]
   end
 
   def get_hover(x, y)
