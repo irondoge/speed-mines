@@ -1,3 +1,5 @@
+/!\ This repo is now unmaintained, refer to [the v2 repository](https://github.com/irondoge/speed-mines-2) for any change or request
+
 # speed-mines
 Minesweeper in ruby/gosu. Goal: Same as classical minesweeper but with osu-like gamaplay.
 
